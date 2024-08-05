@@ -107,7 +107,7 @@ func InitServerMetrics() {
 		prometheus.HistogramOpts{
 			Namespace: "tidb",
 			Subsystem: "server",
-			Name:      "query_statment_processed_keys",
+			Name:      "query_statement_processed_keys",
 			Help:      "Bucketed histogram of processed key count during the scan of handled query statements.",
 			Buckets:   prometheus.ExponentialBuckets(1, 2, 32),
 		}, []string{LblSQLType, LblDb})
